@@ -1,0 +1,22 @@
+plugins{
+    id 'java'
+    id 'org.springframework.boot' version '2.2.7.RELEASE'
+}
+
+group 'edu.max'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+// https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+    compile 'org.springframework.boot:spring-boot-starter-web:2.2.7.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf:2.2.7.RELEASE'
+    
+}
+
+
