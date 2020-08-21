@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class GifRepository {
@@ -38,5 +39,9 @@ private static final List<Gif> ALL_GIFS = Arrays.asList(
 
         public List<Gif> getAllGifs(){
             return ALL_GIFS;
+        }
+
+        public List<Gif> getAllFavorites(){
+            return getAllGifs().stream().filter(Gif::isFavorite).collect(Collectors.toList());
         }
 }
